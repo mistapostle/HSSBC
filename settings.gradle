@@ -1,0 +1,4 @@
+rootProject.name = 'HSSBC'
+include 'core'
+findProject(':core')?.name = 'HSSBC'
+

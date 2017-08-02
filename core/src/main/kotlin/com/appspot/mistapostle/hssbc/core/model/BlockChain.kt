@@ -15,11 +15,15 @@ data class Transaction(   val content:String){
     }
 }
 
-data class Block( val previousBlockId: String, val transactions : List<Transaction> ){
-    val id: String = BCSystem.hash(transactions.joinToString(","){ it.content})
+data class BlockHeader(val version : String , val pow : String ){
+
+}
+data class Block( val previousBlockId: String, val header: BlockHeader, val transactions : List<Transaction> ){
+    private val transactionIdsStr = transactions.joinToString(",") { it.id }
+    val id: String = BCSystem.hash("${previousBlockId} ${header.version} ${header.pow} $transactionIdsStr")
 
     override fun toString(): String {
-        return "Block(id=$id,previousBlockId=$previousBlockId,transactions:$transactions)"
+        return "Block(id=$id,previousBlockId=$previousBlockId,header=$header,transactions:$transactions)"
     }
 }
 

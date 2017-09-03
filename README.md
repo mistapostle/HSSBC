@@ -9,7 +9,7 @@ The goal is to make everything configurable. e.g., how to signature a transation
 Basic Structure
 * BCSystem.kt - a configurable core of the whole system
 * modle - basic models like Block , Transation etc 
-
+* test - unit test , and also show how things works together
 
 DONE:
 * Basic chaining function

@@ -1,6 +1,6 @@
 # HSSBC
 
-This is a BlockChain toy. 
+This is a BlockChain toy for people who want to understand how Block chain works.
 
 HSSBC = Happy Small Simple Block Chain  :) 
 
